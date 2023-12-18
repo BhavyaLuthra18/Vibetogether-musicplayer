@@ -1,0 +1,1295 @@
+body {
+    background-image:linear-gradient(#000000 5%,#ea002b,#1f014f,#100029);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0px;
+    height: auto;
+    color: white;
+  }
+  html[Attributes-Style] {
+    -webkit-locale: "en";
+  }
+  main {
+    height: auto;
+    width: 100%;
+    padding: 0%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    transition: all ease-in-out 1s;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0px;
+    color: white;
+  }
+  /*.section-1 {
+      height: 86vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+  }
+*/
+
+/*----BANNER OF VIBETOGETHER BOX----*/
+
+  .banner{
+    padding-top: 20px;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    background-color: #000000;
+    background-image:linear-gradient(transparent,#ea002b,#1f014f,transparent);
+  }
+ 
+  /*----VIBETOGETHER THEME BOX---*/
+
+#vibetogether-themebox{
+    border: 1px solid #FF8A86 ;
+    width:20vw;
+    height: auto ;
+    padding: 10px ;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image:linear-gradient(#FEB0AE,#000) ;
+    border-radius: 20px ;
+    margin-left: 20px ;
+    font-size: 1rem ;
+  
+
+}
+
+/*--LYRICS OF THE THEMEBOX---*/
+#lyrics{
+  width:80%;
+  background-color:#010001 ;
+  font-size: 2rem ;
+  border-radius: 10px ;
+  text-align: center;
+  margin-top: 10px ;
+  padding:5px ;
+  margin-left: 10%;
+  font-family: cursive;
+
+
+}
+
+/*---AUDIO OF THEMEBOX---*/
+
+audio{
+width: 70%;
+border: 5px  solid lightgray;
+border-radius: 50px ; 
+}
+
+
+/*--AUDIO TAG STYLING--*/
+
+audio{
+  border: 5px  solid lightgray;
+  border-radius: 50px ;
+}
+
+audio::-webkit-media-controls-panel{
+  background-color:#FEFDFE;
+}
+audio::-webkit-media-controls-play-button{
+  background-color:#FEB0AE ;
+  border-radius: 50%;
+}
+audio::-webkit-media-controls-current-time-display{
+  color: #333;
+}
+audio::-webkit-media-controls-time-remaining-display{
+  color: #333;
+}
+audio::-webkit-media-controls-timeline{
+  border-radius: 40px;
+  background-color: #FEB0AE;
+}
+audio::-webkit-media-controls-volume-slider{
+  background-color: #FEB0AE;
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+}
+audio::-webkit-media-controls-mute-button{
+  background-color: #FEB0AE;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-time-remaining-display{
+  color: black  ;
+}
+
+   /*WE DON'T WANT THE SCROLLBAR VISIBLE TO THE USER FOR THAT PURPOSE IT IS HIDDEN*/
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .aside {
+    display: inline-block;
+    overflow: hidden;
+    
+  }
+  .section-1 {
+    width: 70%;
+    height: 85vh;
+    overflow: scroll;
+  }
+  /*WE DON'T WANT THE SCROLLBAR VISIBLE TO THE USER FOR THAT PURPOSE IT IS HIDDEN*/
+  .section-1::-webkit-scrollbar {
+    display: none;
+  }
+  .section-2 {
+    width: 28%;
+    height: 85vh;
+    z-index: 2;
+  }
+  /*******************************ALL THE ANIMATIONS USED IN THE CODE*********************************/
+ /*----BELL ICON ANIMATION---*/
+  #bell-icon i{
+    color:gold; 
+    margin-left: 50px ;
+    margin-right: 30px ;
+    margin-top: 20px ;
+    margin-bottom:10px ;
+    position: relative;
+    animation: bell 0.8s linear infinite alternate-reverse ;
+   transform-origin: top ;
+  }
+
+  @keyframes bell{
+    0%{
+        transform: rotate(-20deg) ;
+    }
+
+    100%{
+        transform: rotate(20deg);
+    }
+}
+
+
+
+  /*IF THE USER HOVERS OVER THE HEART*/
+  @keyframes liked {
+    0% {
+      color: lightpink;
+    }
+    50% {
+      color: orangered;
+    }
+    100% {
+      color: red;
+    }
+  }
+  /*IF THE USER HOVERS OVER THE REMOVE*/
+  @keyframes removed {
+    0% {
+      color: white;
+    }
+    50% {
+      color: dimgrey;
+    }
+    100% {
+      color: darkgray;
+    }
+  }
+  /**********************FOR RESPONSIVENESS ALL THE BREAKPOINTS ARE CLUBBED HERE**************************/
+  
+
+
+  @media screen and (max-width: 1200px) {
+    .favorite {
+      display: none !important;
+    }
+    /* reduced size of search bar */
+    .search {
+      width: 30%;
+    }
+    input {
+      font-size: 11px !important;
+    }
+    .more-controls > div:nth-child(3) {
+      display: none;
+    }
+    .more-controls > div:nth-child(4) {
+      display: none;
+    }
+
+  }
+  
+  @media screen and (max-width: 900px) {
+    .section-1 {
+      width: 100%;
+    }
+  
+    /*Trending-now*/
+    .card {
+      min-width: 250px; /* to apply the flex effect */
+    }
+
+    /*carousel*/
+    .outer-carousel {
+      height: 9%;
+    
+      
+    }
+  
+    .carousel img {
+      height: 20vw;
+      width: 34vw;
+      
+    }
+  
+    .carousel img:nth-child(1) {
+      left: 56vw;
+     
+    }
+    .carousel img:nth-child(3) {
+      right: 56vw;
+    }
+    
+  
+    .music-themes {
+      justify-content: space-around;
+    }
+    .theme-main {
+      width: 50%;
+    }
+  
+    .theme-content {
+      width: 12vw;
+      height: 12vw;
+    }
+    .theme-content p {
+      font-size: 3vw;
+      top: -12.5vw;
+    }
+  
+    .music-themes div img {
+      width: 12vw;
+      height: 12vw;
+    }
+    .content div img:hover {
+      box-shadow: 0px 0px 10px 1px white;
+    }
+    .section-2 {
+      visibility: hidden;
+      opacity: 0;
+      position: absolute;
+      width: 300px;
+      height: 66vh;
+      background-color: #050043;
+      box-shadow: 0px 0px 2px 1px white;
+      right: 0px;
+      top: 23.5%;
+      z-index: 5;
+      overflow: scroll;
+      padding-left: 10px;
+      transition: visibility ease-in-out 0.2s;
+      transition: opacity ease-in-out 0.2s;
+    }
+    .playlist-content {
+      overflow: visible;
+    }
+    /* re-adjusted the queue options box */
+    .Queue-options {
+      position: absolute;
+      height: auto;
+      width: auto;
+      top: 6%;
+      right: 0%;
+    }
+  }
+  
+
+  @media screen and (max-width: 700px) {
+    /*music-themes*/
+    .outer {
+      width: 36vw;
+      height: 24vw;
+      min-width: 123px;
+      min-height: 82px;
+    }
+    .outer .inner span {
+      font-size: 2vw;
+    }
+    
+
+  }
+
+
+
+/*---MEDIAQUERIES WITH MAX WIDTH 550PX SCREEN SIZE---*/
+
+  @media screen and (max-width: 550px) {
+    /*NAVIGATION*/
+    .title img {
+      height: 20px;
+      width: 20px;
+    }
+    /* website name */
+    .title h1 {
+      font-size: 3vw;
+    }
+  
+  
+    .login  {
+      width: 20px;
+      height: 20px;
+    }
+    
+    #bell-icon,.login {
+      margin-top: 8px;
+    }
+   
+    
+
+    .theme-main {
+      width: 100%;
+    }
+    /* theme content */
+    .theme-content {
+      width: 18vw;
+      height: 18vw;
+    }
+    .theme-content p {
+      font-size: 4.5vw;
+      top: -18.8vw;
+    }
+    .music-themes div img {
+      width: 18vw;
+      height: 18vw;
+    }
+  
+    /*-------------MUSIC STATIONS-------------*/
+    #div1 {
+      width: 30vw;
+      height: 20vw;
+    }
+    #div2 {
+      width: 28vw;
+      height: 24vw;
+    }
+    #div3 {
+      width: 26vw;
+      height: 26vw;
+    }
+    #div3 img {
+      width: 15vw;
+      height: 15vw;
+    }
+    #div3 p {
+      font-size: 5vw;
+    }
+    #song-poster {
+      display: none;
+    }
+  }
+  
+  /************************************NAVIGATION SECTION*************************************************/
+  /*GENERAL NAVIGATION-BAR SETTINGS*/
+  
+  .navigation-bar {
+    height: auto;
+    width: auto;
+    justify-content: space-between;
+    transition: all ease-in-out 1s;
+    display: flex;
+    height: auto;
+    width: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+    box-sizing: border-box;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-image:linear-gradient(#000000,#000000);
+   
+  }
+  .navigation-bar > div {
+    display: inline-block;
+  }
+  
+  
+  /*searchbar*/
+  .search {
+    display: inline-block;
+    width: 40%;
+    top: 20%;
+    position: relative;
+  }
+  .search input {
+    width: 100%;
+    text-decoration: none;
+    border-radius: 20px;
+    border-color: antiquewhite;
+    display: inline-block;
+    width: 40%;
+    top: 30%;
+    display: inline-block;
+  }
+
+
+  input::placeholder{
+    color:#d60064;
+    font-family: cursive;
+  }
+
+
+
+  .search > div {
+    display: inline-block;
+  }
+  /*BUTTON WHICH INCLUDES THE SEARCH ICON*/
+  button {
+    background: none;
+    color: white;
+  }
+  
+ 
+  /*LOGIN*/
+  .login {
+    height: 30px;
+    width: 30px;
+  }
+  .login-dropdown {
+    position: absolute;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    top: 60px;
+    right: 70 px;
+    overflow: hidden;
+    z-index: 6;
+    border: 1px solid white;
+    box-shadow: 0px 0px 6px 4px rgba(230, 0, 196, 0.3);
+    transition: all ease-in-out 0.3s;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"]:checked ~ .login-dropdown {
+    width: max-content;
+    height: auto;
+    opacity: 1;
+    padding: 5px;
+    /*display: block;*/
+  }
+  .item p {
+    text-align: center;
+  }
+
+  
+  /****************************************CAROUSEL******************************************************/
+  
+/*CAROUSEL*/
+.outer-carousel {
+  position: relative;
+  left: 9vw;
+  margin-top: 5%;
+  transition: all ease-in-out 1s;
+}
+.carousel {
+  position: absolute;
+  left: 5%;
+  width: 70%;
+  height: auto;
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.carousel img {
+  height: 20vw;
+  width: 22.5vw;
+  border-radius: 20px;
+  transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.2s;
+}
+.carousel img:nth-child(1) {
+  position: relative;
+  left: 41vw;
+  z-index: 2;
+}
+.carousel img:nth-child(2) {
+  z-index: 3;
+}
+.carousel img:nth-child(3) {
+  position: relative;
+  right: 41vw;
+  z-index: 1;
+}
+/*HOVER EFFECTS ON CAROUSEL*/
+
+.carousel img:hover {
+  z-index: 4;
+  box-shadow: 0px 0px 12px 0.1px black;
+  height: 18vw;
+  width: 27vw;
+}
+  
+  /****************************************TRENDING NOW***************************************************/
+  /*TRENDING NOW*/
+  
+
+  .Trending-now {
+    position: relative;
+    top: 20vw;
+    font-family: cursive ;
+    margin-top: 140px;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.2rem ;
+    margin-bottom: 60px ;
+    margin-left: 50px ;
+  }
+  
+  .Trending-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top:50px;
+  }
+  .Trending-content > div {
+    border: 1.5px solid transparent;
+    height: 100px;
+    width: 47%;
+    margin: 5px;
+  }
+  .card {
+    display: flex;
+    flex-direction: row;
+    transition: box-shadow ease-in-out 0.1s;
+  }
+  .card img {
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+  }
+  
+  /*---ON HOVERING ON CARD BORDER WITH BOX SHADOW APPEARS----*/
+  
+  .card:hover {
+    border-color: antiquewhite;
+    box-shadow: 0px 0px 6px 4px rgba(230, 196, 196, 0.3);
+  }
+  
+  /*----CURRENTLY THE OPACITY OF THE play-button ON CARD IMAGE IS SET TO ZERO BUT ON HOVER IT APPEARS----*/
+  .play-button {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: -104%;
+    color: rgba(255, 0, 255, 0);
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 40px;
+    padding-top: 2%;
+    text-align: center;
+    z-index: 5;
+    transition: all ease-in-out 0.2s;
+  }
+  
+  .play-button i {
+    padding-top: 28%;
+  }
+  
+  /*----PURPLE PLAYBUTTON EFFECT ON HOVER----*/
+  .play-button:hover {
+    color: rgba(255, 0, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  /*----ABOUT-SONG---*/
+  .AboutSong {
+    margin: auto 9%;
+  }
+  .more-options {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 2%;
+    margin-top: 2%;
+  }
+  
+  /*----DROPDOWN APPEARS ON CLICKING THE ELLIPSIS ICON-----*/
+  
+  .Trending-now-dropdown {
+    position: absolute;
+    background-color:#1E014C;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    top: 20px;
+    right: 0px;
+    overflow: hidden;
+    z-index: 2;
+    border: 1px solid white;
+    box-shadow: 0px 0px 6px 4px rgba(230, 0, 196, 0.3);
+    transition: all ease-in-out 0.3s;
+  }
+  
+  /*CURSOR IS SET TO POINTER FOR ELLIPSIS*/
+  
+  .fa-ellipsis {
+    cursor: pointer;
+    color: antiquewhite;
+  }
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[type="checkbox"]:checked ~ .Trending-now-dropdown {
+    width: max-content;
+    height: auto;
+    opacity: 1;
+    padding: 5px;
+    /*display: block;*/
+  }
+  .item p {
+    text-align: center;
+  }
+  /***************************************POPULAR ARTISTS**************************************************/
+  /*------POPULAR-ARTISTS----*/
+  .Popular-Artists {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 20vw;
+    box-sizing: border-box;
+    margin-left: 50px ;
+  }
+  .Popular-Artists > div {
+    margin: 6px;
+    text-align: center;
+  }
+  .Popular-Artists-Content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-family:cursive ;
+    font-size: 1.2rem ;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .Popular-Artists-Content > a > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .Popular-Artists-Content a div img {
+    width: 10vw;
+    border-radius: 50%;
+    height: 10vw;
+    min-width: 65px;
+    min-height: 65px;
+  }
+  .Popular-Artists-Content a div i {
+    color: transparent;
+  }
+  
+  /*HOVERING EFFECT ON POPULAR-ARTISTS*/
+  
+  .Popular-Artists-Content a div:hover i {
+    color: whitesmoke;
+  }
+  .Popular-Artists-Content a div:hover img {
+    color: whitesmoke;
+    background-color: #80808078;
+    box-shadow: 0 0 40px black;
+  }
+  
+  /*******************************************music-stations**********************************************/
+  .music-themes {
+    position: relative;
+    top: 28vw;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background-image: linear-gradient(#0C134F,#5C469C);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .music-stations {
+    margin: 35px 10px 35px 0px;
+  }
+  
+  /*3 DIVS FOR THE MUSIC STATION DESIGN*/
+  
+  #div1 {
+    height: 8vw;
+    width: 12vw;
+    box-shadow: 0 0 40px gold;
+    background-color:#BB80C3;
+  }
+  
+  #div2 {
+    position: relative;
+    top: -1vw;
+    left: 1vw;
+    width: 10vw;
+    height: 10vw;
+    /*box-shadow: 0 0 40px white;*/
+    background-color:#98A3BC ;
+  }
+  #div3 {
+    position: relative;
+    top: -1vw;
+    left: 1vw;
+    width: 8vw;
+    height: 12vw;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: cursive ;
+  }
+  
+  /*LOGO AND NAME INSIDE THE INNERMOST DIV*/
+  
+  #div3 img {
+    width: 5vw;
+    height: 5vw;
+  }
+  #div3 p {
+    font-size: 2vw;
+  }
+  .theme-main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .theme-content {
+    margin: 3%;
+    height: 8vw;
+    width: 8vw;
+    text-align: center;
+    border-radius: 100%;
+    font-family: cursive ;
+  }
+  .music-themes div img {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+  }
+  .theme-content p {
+    text-align: center;
+    position: relative;
+    top: -8.25vw;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    font-size: 2vw;
+  }
+  /*ON HOVERING A GRADIENT EFFECT APPEARS ON THE DIFFERENT THEMES*/
+  
+  .theme-content p:hover {
+    background-image: linear-gradient(
+      0deg,
+      rgb(256, 0, 256) -66%,
+      rgba(0, 0, 0, 0)
+    );
+    transition: background-image 0.3s;
+  }
+  
+  /**************************************SECOND SET OF THEMES**********************************************/
+  
+  .theme-2 {
+    position: relative;
+    top: 30vw;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  /*THEME-2 CONSIST OF 2 DIVS INNER AND OUTER AND ON HOVERING ZOOM IN EFFECT IS CREATED*/
+  
+  .outer {
+    width: 19.5vw;
+    height: 13vw;
+    overflow: hidden;
+    min-width: 123px;
+    min-height: 82px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .inner {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+    transition: all ease-in-out 0.3s;
+  }
+  
+  .theme-2 .outer:nth-child(1) .inner {
+    background-image: url(Vibetogetherimages/lofimixtape.jpeg);
+    background-repeat: no-repeat;
+  }
+  .theme-2 .outer:nth-child(2) .inner {
+    background-image: url(Vibetogetherimages/party.jpeg);
+    background-repeat: no-repeat;
+  }
+  .theme-2 .outer:nth-child(3) .inner {
+    background-image: url(Vibetogetherimages/roadtrip.jpeg);
+    background-repeat: no-repeat;
+  }
+  .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .inner::before {
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+  }
+  
+  .inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .outer .inner span {
+    color: white;
+    font-size: 2vw;
+  }
+  /*HOVERING EFFECTS: SCALE OF INNER DIV INCREASES TO 1.3 GIVING A ZOOM EFFECT OF THE IMAGE IN THE INNER DIV*/
+  .outer:hover .inner {
+    transform: scale(1.3);
+  }
+  .outer.inner span {
+    transform: scale(1);
+    transition: all ease-in-out 0.3s;
+  }
+  /*THE THEME NAME HOWEVER ON HOVER IS MADE TO SCALE DOWN FOR A 3D EFFECT */
+  .outer:hover .inner span {
+    transform: scale(0.75);
+  }
+
+ /*---MORE OF WHAT YOU LIKE AND PODCAST SECTIONS---*/
+  .moreofwhatyoulike{
+    position: relative;
+    top: 31vw;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.6rem ;
+    font-family: cursive ;
+  }
+
+  .vibetogether-podcast{
+    position: relative;
+    top: 31vw;
+    height: auto;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 3vw 0px;
+    font-size: 2rem ;
+    font-family: cursive ;
+  }
+
+
+
+  /* PODCAST AND MORE OF WHAT YOU LIKE CONTENT */
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    padding: 0px 2px;
+    font-size: 2rem ;
+    margin-top:10px ;
+  }
+  
+  .content div img {
+    width: 10vw;
+    min-width: 60px;
+    height: 10vw;
+    margin: 5px;
+    min-height: 60px;
+    transition: box-shadow ease-in-out 0.1s;
+  }
+  
+  .content div {
+    margin: 2vw 0px;
+    width: 10.2vw;
+    min-width: 60px;
+    font-size:1.5rem ;
+  }
+ 
+  .content div p:nth-child(2n) {
+    width: 100%;
+    word-wrap: break-word;
+    font-size: 1.4rem ;
+  }
+  .content div p:nth-child(2n + 1) {
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  /*ON HOVERING ON PODCAST AND MORE OF WHAT YOU LIKE TITLE A 3D EFFECT TAKES PLACE*/
+  
+  .content div img:hover {
+    width: 0;
+    height: 0;
+    border-top: 2.5vw solid transparent;
+    border-left: 5vw solid plum ;
+    border-bottom: 2.5vw solid palevioletred;
+    box-shadow: 0px 0px 10px 1px white;
+  }
+  
+  /*************************************************aside section-2****************************************/
+  .section-2 {
+    width: 28%;
+    height: 86vh;
+    margin-top: 50px ;
+  }
+  .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 1.2rem ;
+    font-family: cursive ;
+  }
+  .heading h4 a {
+    color:#F3A1B4;
+    text-decoration: none;
+  }
+  /*****************************#VIBETOGETHER-QUEUE-SECTION******************************/
+  .Queue-options {
+    position: fixed;
+    top:20%;
+    right: 1%;
+    background-color:#1E014C ;
+    width: 12%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1%;
+    box-sizing: border-box;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 1px #BB80C3;
+    z-index: 3;
+    opacity: 0;
+    transform: scale(0);
+    transition: all ease-in-out 0.3s;
+    font-family: c ;
+  }
+  /******Queue-dropdown*******/
+  #Queue-dropdown:target {
+    opacity: 1;
+    transform: scale(1);
+  }
+  .Queue-options {
+    color: black;
+  }
+  .Queue-options p {
+    text-align: center;
+  }
+  .Queue-options p a {
+    text-decoration: none;
+  }
+  .Vibetogetherplaylist-content {
+    width: 100%;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    cursor: pointer;
+    font-family:cursive ;
+    font-size: 1.1rem ;
+
+  }
+  .Vibetogetherplaylist-content::-webkit-scrollbar {
+    display: none;
+  }
+  .song-details {
+    display: flex;
+    height: 100%;
+    width: 75%;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fa-music {
+    margin-left: 4px;
+    width: 50%;
+    color: white;
+   
+  }
+  
+  
+  .song-details > div:nth-child(3) {
+    margin-left: 11px;
+    width: 50%;
+    word-wrap: break-word;
+  }
+  .action {
+    position: relative;
+    bottom: 62%;
+    left: 90%;
+    width: min-content;
+    height: 20px;
+    color: white;
+    font-size: 20px;
+  }
+  .action i {
+    transition: all ease-in-out 0.1s;
+  }
+  
+  .playlist-item {
+    width: 90%;
+    height: auto;
+    padding: 0px 1%;
+    box-sizing: border-box;
+    margin: 1%;
+  }
+  
+  /************* hover effect on heart ********************/
+  .playlist-item .action > div:nth-child(1):hover .fa-heart {
+    animation-name: liked;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1s;
+  }
+  /************* hover effect on remove ********************/
+  .playlist-item .action > div:nth-child(2):hover .fa-minus-circle {
+    animation-name: removed;
+    animation-iteration-count: infinite;
+    /*animation-direction: ;*/
+    animation-duration: 1s;
+  }
+  
+  .playlist-item:hover {
+    box-shadow: 0px 0px 10px 1px rgba(230, 0, 196);
+    border-color: white;
+    border: 2px;
+  }
+  
+  .playlist-item img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .song-content {
+    width: 80px;
+    height: 80px;
+  }
+  
+  /***********************************************FOOTER***********************************************/
+  footer {
+    background:#000;
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: nowrap;
+    padding: 0px 3%;
+    box-sizing: border-box;
+    z-index: 6;
+  }
+  /*CURRENT SONG*/
+  .Song-playing {
+    height: 90%;
+    width: 25%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  #song-poster {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+  }
+  
+  #song-poster img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .like-and-remove {
+    height: 100%;
+    padding-top: 4%;
+  }
+  
+  .Song-description {
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+  
+  .Song-description div:nth-child(1) {
+    font-size: 15px;
+  }
+  
+  .Song-description div:nth-child(2) {
+    font-size: 12px;
+  }
+  
+  /*music-player CONTROLS*/
+  
+  .music-player {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .controls {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+  }
+  
+  #slider {
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+  }
+  
+  .time {
+    margin: 0px 10px;
+  }
+  
+  .slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.5;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background:#DC0029;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4caf50;
+    cursor: pointer;
+  }
+  .like-and-remove {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .more-controls {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .controls {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .like-and-remove > span:nth-child(1):hover .fa-heart {
+    animation-name: liked;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-duration: 1s;
+  }
+  .like-and-remove > span:nth-child(2):hover .fa-minus-circle {
+    animation-name: removed;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+  }
+  
